@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* Full Name    : Juan De Gouveia
+* StudentID    : 101203253
+* Date Modified: October 24, 2021
+* File         : BackgroundController
+* Description  : v1.3 - rotated the background
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,11 +1,18 @@
-﻿using System.Collections;
+﻿/*
+* Full Name    : Juan De Gouveia
+* StudentID    : 101203253
+* Date Modified: October 24, 2021
+* File         : BulletController
+* Description  : v1.4 - switched all the verticals to horizontal, and the other way around
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletController : MonoBehaviour, IApplyDamage
 {
-    public float verticalSpeed;
-    public float verticalBoundary;
+    public float horizontalSpeed;
+    public float horizontalBoundary;
     public BulletManager bulletManager;
     public int damage;
     
@@ -24,12 +31,12 @@ public class BulletController : MonoBehaviour, IApplyDamage
 
     private void _Move()
     {
-        transform.position += new Vector3(0.0f, verticalSpeed, 0.0f) * Time.deltaTime;
+        transform.position += new Vector3(horizontalSpeed, 0.0f, 0.0f) * Time.deltaTime;
     }
 
     private void _CheckBounds()
     {
-        if (transform.position.y > verticalBoundary)
+        if (transform.position.x > horizontalBoundary)
         {
             bulletManager.ReturnBullet(gameObject);
         }
